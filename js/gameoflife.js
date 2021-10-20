@@ -33,7 +33,7 @@ const corners = (state = []) => {
 };
 
 const printCells = (state = []) => {
-  const { bottomLeft, topRight } = corner(state);
+  const { bottomLeft, topRight } = corners(state);
   let accumulator = "";
   for (let y = topRight[1]; y >= bottomLeft[1]; y--) {
     let row = [];
