@@ -31,7 +31,7 @@ const printCells = (state = []) => {
   const xs = state.map(([x, _]) => x);
   const ys = state.map(([_, y]) => y);
   return {
-    topRight: [Math.max(...xs), Math.max(...ys)],
+    topRight: [Math.max(...xs), Math.max(...xs)],
     bottomLeft: [Math.min(...xs), Math.min(...ys)],
   };
 };
