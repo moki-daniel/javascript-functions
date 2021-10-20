@@ -72,7 +72,7 @@ const calculateNext = (state) => {
   const { bottomLeft, topRight } = corners(state);
   let result = [];
   for (let y = topRight[1] + 1; y >= bottomLeft[1] - 1; y--) {
-    for (let x = bottomLeft[0] - 1; x <= topRight(0) + 1; x++) {
+    for (let x = bottomLeft[0] - 1; x <= topRight[0] + 1; x++) {
       result = result.concat(willBeAlive([x, y], state) ? [[x, y]] : []);
     }
   }
